@@ -1,4 +1,4 @@
-package com.group2.entity;
+package com.group2.phrmanager.entity;
 
 public class AdviceEntity {
     public String H_title; //文章名

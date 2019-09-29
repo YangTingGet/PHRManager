@@ -1,10 +1,10 @@
-package com.group2.entity;
+package com.group2.phrmanager.entity;
 
 /**
  *
  * @author 王见林
  */
-public class AdminEntiy {
+public class AdminEntity {
     private String Admin_Name;
     private String Admin_Password;
 

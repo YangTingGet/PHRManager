@@ -1,4 +1,4 @@
-package com.group2.entity;
+package com.group2.phrmanager.entity;
 import java.util.Date;
 /**
  *病历夹实体类

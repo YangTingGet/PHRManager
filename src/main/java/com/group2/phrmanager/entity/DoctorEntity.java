@@ -1,4 +1,4 @@
-package com.group2.entity;
+package com.group2.phrmanager.entity;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import java.util.Date;
  * 医生实体类
  * @author 王见林
  */
-public class DoctorEntiy {
+public class DoctorEntity {
     public int Doctor_num; //医生编号（主键）
     public String Doctor_name; //医生姓名
     public String Doctor_category; //科室

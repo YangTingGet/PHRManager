@@ -1,7 +1,7 @@
 package com.group2.dao;
 
-import com.group2.entiy.*;
-
+import com.group2.entiy.User;
+import com.group2.entiy.UserEntiy;
 import java.util.List;
 
 /**
@@ -10,12 +10,15 @@ import java.util.List;
  */
 public interface UserDao {
 
+    void add(User user);
 
-//用户个人中心
-    /**
-     * 添加用户（用户注册）
-     */
-    boolean insertUser(UserEntiy userEntiy);
+    void delete();
+
+    User find();
+
+    List<User> findAll();
+
+    void update(User user);
 
     /**
      * 查询用户密码
@@ -76,16 +79,6 @@ public interface UserDao {
 
 
 //访问资讯
-
-    /**
-     *根据资讯的id搜索资讯内容
-     */
-    AdviceEntiy selectAdvice(String adviceId);
-
-    /**
-     *查找一些资讯（用于首页展示）
-     */
-    List<AdviceEntiy> selectAdvices();
 
 }
 
