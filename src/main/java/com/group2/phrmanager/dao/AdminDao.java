@@ -1,4 +1,4 @@
-package com.group2.dao;
+package com.group2.phrmanager.dao;
 
 import com.group2.phrmanager.entity.AdminEntity;
 import java.util.List;

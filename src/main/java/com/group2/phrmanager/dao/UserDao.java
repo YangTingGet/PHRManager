@@ -1,7 +1,10 @@
-package com.group2.dao;
+package com.group2.phrmanager.dao;
 
-import com.group2.entiy.User;
-import com.group2.entiy.UserEntiy;
+
+import com.group2.phrmanager.entity.ABSEntity;
+import com.group2.phrmanager.entity.MedRecordEntity;
+import com.group2.phrmanager.entity.MedicineEntity;
+import com.group2.phrmanager.entity.UserEntity;
 import java.util.List;
 
 /**
@@ -10,15 +13,15 @@ import java.util.List;
  */
 public interface UserDao {
 
-    void add(User user);
+    void add(UserEntity user);
 
     void delete();
 
-    User find();
+    UserEntity find();
 
-    List<User> findAll();
+    List<UserEntity> findAll();
 
-    void update(User user);
+    void update(UserEntity user);
 
     /**
      * 查询用户密码
@@ -33,31 +36,31 @@ public interface UserDao {
     /**
      * 根据用户名查询用户信息
      */
-    UserEntiy selectUserbyuserName(String userName);
+    UserEntity selectUserbyuserName(String userName);
 
     /**
      * 更新用户信息
      */
-    boolean updeteUser(UserEntiy userEntiy);
+    boolean updeteUser(UserEntity userEntiy);
 
 
 //查看药品信息
     /**
      * 查询数据库前几样药品
      */
-    List<DrugEntiy> selectDrugs();
+    List<MedicineEntity> selectDrugs();
 
     /**
      * 根据药品名称查询药品信息
      */
-    DrugEntiy selectDrugbyDrugName(String drugName);
+    MedicineEntity selectDrugbyDrugName(String drugName);
 
 
 //病历夹
     /**
      *查询病历夹信息
      */
-    ABSEntiy selectABSbyuserName(String userName);
+    ABSEntity selectABSbyuserName(String userName);
 
     /**
      *修改备忘录笔记
@@ -67,7 +70,7 @@ public interface UserDao {
     /**
      * 根据用户名查看该用户的病历
      */
-    MedRecordEntiy selectMedRecordbyuserName(String userName);
+    MedRecordEntity selectMedRecordbyuserName(String userName);
 
     /**
      * 更新用户对服务评价
