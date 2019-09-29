@@ -1,5 +1,7 @@
 package com.group2.phrmanager.dao;
 
+
+
 import com.group2.phrmanager.entity.HospitalEntity;
 
 import java.util.List;
@@ -11,14 +13,13 @@ import java.util.List;
  */
 
 public interface HospitalDao {
-    void add(HospitalEntity hospital);
+    boolean add(HospitalEntity hospital);
 
-    void delete();
+    boolean delete(String hospitalName);
 
-    HospitalEntity find();
+    HospitalEntity find(String hospitalName);
 
     List<HospitalEntity> findAll();
 
-    void update(HospitalEntity hospital);
-
+    boolean update(HospitalEntity newInfo);
 }
