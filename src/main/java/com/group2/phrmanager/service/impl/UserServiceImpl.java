@@ -16,13 +16,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-@Service
 
-public class UserServiceImpl implements UserService {
 
-    @Autowired
-    UserDao userDao;
-    DrugDao drugDao;
+
 
 @Service
 public class UserServiceImpl implements UserService {
