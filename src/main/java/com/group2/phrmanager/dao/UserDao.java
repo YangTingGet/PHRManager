@@ -2,6 +2,7 @@ package com.group2.phrmanager.dao;
 
 
 import com.group2.phrmanager.entity.UserEntity;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * @author TINGTINGTING
  * 用户功能持久层接口
  */
-
+@Repository
 public interface UserDao {
 
     boolean add(UserEntity user);

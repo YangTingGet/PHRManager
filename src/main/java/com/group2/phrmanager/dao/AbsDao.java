@@ -5,6 +5,7 @@ import com.group2.phrmanager.entity.ABSEntity;
 
 import java.util.List;
 
+
 public interface AbsDao {
     boolean add(ABSEntity abs);
 
