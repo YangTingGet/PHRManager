@@ -2,6 +2,7 @@ package com.group2.phrmanager.service;
 
 
 import com.group2.phrmanager.entity.AdviceEntity;
+import com.group2.phrmanager.entity.HospitalEntity;
 import com.group2.phrmanager.entity.UserEntity;
 
 import java.util.List;
@@ -20,27 +21,27 @@ public interface AdminService {
     /**
      * 更改审核状态
      */
-    boolean reviseAdviceState();
+    boolean reviseAdviceState(String adviceId);
 
     /**
      * 添加医院
      */
-    boolean addHospital();
+    boolean addHospital(HospitalEntity hospitalEntity);
 
     /**
      * 删除医院
      */
-    boolean deleteHospital();
+    boolean deleteHospital(String hospitalName);
 
     /**
      * 得到医院信息
      */
-    boolean getHospitalInformation();
+    HospitalEntity getHospitalInformation(String hospitalName);
 
     /**
      * 查看用户信息
      */
-    UserEntity getUserInfo();
+    UserEntity getUserInfo(String userName);
 
     /**
      * 查看用户订单

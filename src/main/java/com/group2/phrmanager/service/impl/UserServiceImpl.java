@@ -31,9 +31,10 @@ public class UserServiceImpl implements UserService {
     public boolean checkUserPwd(String username, String password) {
 
         UserEntity userEntity = userDao.find(username);
-        if (password.equals(userEntity.Password))
+        if (password.equals(userEntity.getPassword()))
             return true;
-        return false;
+        else
+            return false;
     }
 
     @Override
