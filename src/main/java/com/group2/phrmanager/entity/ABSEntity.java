@@ -6,12 +6,12 @@ import java.util.Date;
  */
 
 public class ABSEntity {
-    public int abs_num; // 病历夹编号
-    public String Me_name; //药物名
-    public String Me_dosis; //剂量
-    public Date Tr_time; //诊断时间
-    public String puWe_thing; //待办事件
-    public String User_name; //用户名
+    private int abs_num; // 病历夹编号
+    private String me_name; //药物名
+    private String me_dosis; //剂量
+    private Date tr_time; //诊断时间
+    private String we_thing; //待办事件
+    private String user_name; //用户名
 
     public int getAbs_num() {
         return abs_num;
@@ -22,42 +22,42 @@ public class ABSEntity {
     }
 
     public String getMe_name() {
-        return Me_name;
+        return me_name;
     }
 
     public void setMe_name(String me_name) {
-        Me_name = me_name;
+        this.me_name = me_name;
     }
 
     public String getMe_dosis() {
-        return Me_dosis;
+        return me_dosis;
     }
 
     public void setMe_dosis(String me_dosis) {
-        Me_dosis = me_dosis;
+        this.me_dosis = me_dosis;
     }
 
     public Date getTr_time() {
-        return Tr_time;
+        return tr_time;
     }
 
     public void setTr_time(Date tr_time) {
-        Tr_time = tr_time;
+        this.tr_time = tr_time;
     }
 
-    public String getPuWe_thing() {
-        return puWe_thing;
+    public String getWe_thing() {
+        return we_thing;
     }
 
-    public void setPuWe_thing(String puWe_thing) {
-        this.puWe_thing = puWe_thing;
+    public void setWe_thing(String we_thing) {
+        this.we_thing = we_thing;
     }
 
     public String getUser_name() {
-        return User_name;
+        return user_name;
     }
 
     public void setUser_name(String user_name) {
-        User_name = user_name;
+        this.user_name = user_name;
     }
 }

@@ -4,11 +4,11 @@ package com.group2.phrmanager.entity;
  * @author 王见林
  */
 public class HospitalEntity {
-    public String hospital_name;// 医院名
-    public String hospital_password;// 密码
-    public String hospital_tel;//医院联系电话
-    public String hospital_add;//医院地址
-    public String hospital_major;//医院主治
+    private String hospital_name;// 医院名
+    private String hospital_password;// 密码
+    private String hospital_tel;//医院联系电话
+    private String hospital_add;//医院地址
+    private String hospital_major;//医院主治
 
     public String getHospital_name() {
         return hospital_name;

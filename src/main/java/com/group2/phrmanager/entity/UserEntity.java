@@ -1,13 +1,13 @@
 package com.group2.phrmanager.entity;
 
 public class UserEntity {
-    public String user_name;//用户名
-    public String Password;//密码
-    public String Telphone;//电话
-    public String Email;//邮箱
-    public String id_card;//身份证号
-    public String really_name;//真实姓名
-    public String abs_num;//病历夹编号
+    private String user_name;//用户名
+    private String password;//密码
+    private String telphone;//电话
+    private String email;//邮箱
+    private String id_card;//身份证号
+    private String really_name;//真实姓名
+    private String abs_num;//病历夹编号
 
     public String getUser_name() {
         return user_name;
@@ -18,27 +18,27 @@ public class UserEntity {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
     public String getTelphone() {
-        return Telphone;
+        return telphone;
     }
 
     public void setTelphone(String telphone) {
-        Telphone = telphone;
+        this.telphone = telphone;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getId_card() {
