@@ -19,7 +19,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean checkAdminPwd(String userName, String password) {
         AdminEntity adminEntity=adminDao.find(userName);
-        if(password.equals(adminEntity.getAdmin_Password()))
+        if(password.equals(adminEntity.getAdmin_password()))
             return true;
         else
             return false;

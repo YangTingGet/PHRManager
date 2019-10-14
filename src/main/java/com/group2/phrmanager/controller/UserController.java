@@ -47,14 +47,14 @@ public class UserController {
             }
 
         } else if (radio.equals("option2")) {
-            result = adminService.checkAdminPwd(userName, password);
+            result = hospitalService.checkHospitalPwd(userName, password);
             if (result) {
                 request.getSession().setAttribute("userName",userName);
                 return 2;
             }
 
         } else if (radio.equals("option3")) {
-            result = hospitalService.checkHospitalPwd(userName, password);
+            result = adminService.checkAdminPwd(userName, password);
 
             if (result) {
                 request.getSession().setAttribute("userName",userName);
