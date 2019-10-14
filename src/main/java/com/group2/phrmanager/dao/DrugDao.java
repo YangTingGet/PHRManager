@@ -3,14 +3,13 @@ package com.group2.phrmanager.dao;
 
 
 import com.group2.phrmanager.entity.MedicineEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 @Repository
+@Mapper
 public interface DrugDao {
     boolean add(MedicineEntity drug);
 

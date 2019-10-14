@@ -7,7 +7,6 @@ public class UserEntity {
     private String email;//邮箱
     private String id_card;//身份证号
     private String really_name;//真实姓名
-    private String abs_num;//病历夹编号
 
     public String getUser_name() {
         return user_name;
@@ -57,11 +56,5 @@ public class UserEntity {
         this.really_name = really_name;
     }
 
-    public String getAbs_num() {
-        return abs_num;
-    }
 
-    public void setAbs_num(String abs_num) {
-        this.abs_num = abs_num;
-    }
 }

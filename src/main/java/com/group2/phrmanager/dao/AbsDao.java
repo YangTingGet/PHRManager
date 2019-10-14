@@ -2,6 +2,7 @@ package com.group2.phrmanager.dao;
 
 
 import com.group2.phrmanager.entity.ABSEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 
 
 @Repository
-
+@Mapper
 public interface AbsDao {
     boolean add(ABSEntity abs);
 

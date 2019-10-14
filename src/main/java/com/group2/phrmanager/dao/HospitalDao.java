@@ -3,6 +3,7 @@ package com.group2.phrmanager.dao;
 
 
 import com.group2.phrmanager.entity.HospitalEntity;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
  * 医院功能持久层接口
  * 就诊结果
  */
-
+@Repository
 public interface HospitalDao {
     boolean add(HospitalEntity hospital);
 
