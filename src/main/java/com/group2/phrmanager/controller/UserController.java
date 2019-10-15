@@ -1,8 +1,11 @@
 package com.group2.phrmanager.controller;
 
 
+import com.group2.phrmanager.entity.DoctorEntity;
+import com.group2.phrmanager.entity.HospitalEntity;
 import com.group2.phrmanager.entity.UserEntity;
 import com.group2.phrmanager.service.AdminService;
+import com.group2.phrmanager.service.DoctorService;
 import com.group2.phrmanager.service.UserService;
 import com.group2.phrmanager.service.HospitalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,19 +19,20 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
 @Controller
 @RequestMapping(value = "/user" ,method = RequestMethod.GET)
 public class UserController {
-
-
     @Autowired
     UserService userService;
     @Autowired
     AdminService adminService;
     @Autowired
     HospitalService hospitalService;
+    @Autowired
+    private DoctorService doctorService; // wts
 
     @RequestMapping("/doLogin")
     @ResponseBody
@@ -108,5 +112,17 @@ public class UserController {
             return modelAndView;
     }
 
-
+    @RequestMapping("/getRegisteredOptionalInfo")
+    @ResponseBody
+    public ModelAndView getRegisteredOptionalInfo(ModelAndView modelAndView,HttpServletRequest request){
+        UserEntity userEntity = userService.getInfo(
+                (String) request.getSession().getAttribute("userName"));
+        List<DoctorEntity> allDoctors = doctorService.getAllDoctors();
+        List<HospitalEntity> allHospitals = hospitalService.getAllHospitals();
+        modelAndView.addObject("userEntity", userEntity);
+        modelAndView.addObject("allDoctors", allDoctors);
+        modelAndView.addObject("allHospitals", allHospitals);
+        modelAndView.setViewName("appintment");
+        return modelAndView;
+    }
 }

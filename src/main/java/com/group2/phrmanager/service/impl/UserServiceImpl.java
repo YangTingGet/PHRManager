@@ -32,6 +32,11 @@ public class UserServiceImpl implements UserService {
     DrugDao drugDao;
 
     @Override
+    public UserEntity getInfo(String userName) {
+        return userDao.find(userName);
+    }
+
+    @Override
     public boolean checkUserPwd(String username, String password) {
 
         UserEntity userEntity = userDao.find(username);

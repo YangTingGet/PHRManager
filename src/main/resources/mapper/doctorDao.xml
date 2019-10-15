@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- @author wts-->
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.group2.phrmanager.dao.DoctorDao">
+    <select id="findAll" resultType="com.group2.phrmanager.entity.DoctorEntity">
+        select * from doctor
+    </select>
+</mapper>
