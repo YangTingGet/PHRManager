@@ -6,7 +6,7 @@ import com.group2.phrmanager.dao.AbsDao;
 import com.group2.phrmanager.dao.DrugDao;
 import com.group2.phrmanager.dao.UserDao;
 import com.group2.phrmanager.entity.ABSEntity;
-import com.group2.phrmanager.entity.MedRecordEntity;
+import com.group2.phrmanager.entity.CaseHistory;
 import com.group2.phrmanager.entity.MedicineEntity;
 import com.group2.phrmanager.entity.UserEntity;
 import com.group2.phrmanager.service.UserService;
@@ -22,15 +22,26 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    UserDao userDao;
+    @Autowired
+    AbsDao absDao;
+
     @Autowired
     DrugDao drugDao;
-    UserDao userDao;
-    AbsDao absDao;
+
+    @Override
+    public UserEntity getInfo(String userName) {
+        return userDao.find(userName);
+    }
 
     @Override
     public boolean checkUserPwd(String username, String password) {
 
         UserEntity userEntity = userDao.find(username);
+        System.out.println(userEntity.getPassword());
+        System.out.println(password);
         if (password.equals(userEntity.getPassword()))
             return true;
         else
@@ -85,7 +96,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public MedRecordEntity QueryMedRecordbyuserName(String userName) {
+    public CaseHistory QueryMedRecordbyuserName(String userName) {
 
         return null;
     }

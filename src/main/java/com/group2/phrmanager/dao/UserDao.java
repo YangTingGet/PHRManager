@@ -2,6 +2,7 @@ package com.group2.phrmanager.dao;
 
 
 import com.group2.phrmanager.entity.UserEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * 用户功能持久层接口
  */
 @Repository
+@Mapper
 public interface UserDao {
 
     boolean add(UserEntity user);

@@ -4,6 +4,7 @@ package com.group2.phrmanager.dao;
 import com.group2.phrmanager.entity.AdminEntity;
 import com.group2.phrmanager.entity.HospitalEntity;
 import com.group2.phrmanager.entity.UserEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
  * 暂定！！！
  */
 @Repository
+@Mapper
 public interface AdminDao {
     boolean add(AdminEntity admin);
 

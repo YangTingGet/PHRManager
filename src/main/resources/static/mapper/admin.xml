@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group2.phrmanager.dao.AdminDao">
+
+
+    <select id="find" parameterType="String" resultType="AdminEntity">
+        select admin_name,admin_password from admin where admin_name=#{admin_name}
+    </select>
+</mapper>

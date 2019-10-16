@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group2.phrmanager.dao.UserDao">
+
+    <select id="selectPassword" parameterType="String" resultType="String">
+        select password from user where user_name=#{userName}
+    </select>
+
+    <select id="find" parameterType="String" resultType="UserEntity">
+        select user_name,password,telphone,email,id_card,really_name from user where user_name=#{userName}
+    </select>
+
+    <insert id="add" parameterType="UserEntity" >
+        INSERT INTO user(user_name,password,telphone,email,id_card,really_name)
+        VALUES(#{user_name},#{password},#{telphone},#{email},#{id_card},#{really_name})
+    </insert>
+
+    <update id="update" parameterType="UserEntity">
+        UPDATE user SET email =#{email} ,password =#{password},really_name=#{really_name},telphone=#{telphone},id_card=#{id_card} WHERE user_name = #{user_name}
+    </update>
+</mapper>

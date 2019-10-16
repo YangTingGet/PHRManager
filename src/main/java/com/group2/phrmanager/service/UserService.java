@@ -1,13 +1,17 @@
 package com.group2.phrmanager.service;
 
 import com.group2.phrmanager.entity.ABSEntity;
-import com.group2.phrmanager.entity.MedRecordEntity;
+import com.group2.phrmanager.entity.CaseHistory;
 import com.group2.phrmanager.entity.MedicineEntity;
 import com.group2.phrmanager.entity.UserEntity;
 
 import java.util.List;
 
 public interface UserService {
+//    @author wts
+    /* 查询个人信息*/
+    UserEntity getInfo(String userName);
+
     /**
      * 登录验证用户密码
      */
@@ -55,32 +59,10 @@ public interface UserService {
     /**
      * 根据用户名查看该用户的病历
      */
-    MedRecordEntity QueryMedRecordbyuserName(String userName);
+    CaseHistory QueryMedRecordbyuserName(String userName);
 
     /**
      * 保存用户对服务的评价
      */
     boolean saveRemarks(String remarks,String userName);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

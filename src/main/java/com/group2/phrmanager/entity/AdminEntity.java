@@ -5,22 +5,22 @@ package com.group2.phrmanager.entity;
  * @author 王见林
  */
 public class AdminEntity {
-    private String admin_Name;
-    private String admin_Password;
+    private String admin_name;
+    private String admin_password;
 
-    public String getAdmin_Name() {
-        return admin_Name;
+    public String getAdmin_name() {
+        return admin_name;
     }
 
-    public void setAdmin_Name(String admin_Name) {
-        this.admin_Name = admin_Name;
+    public void setAdmin_name(String admin_name) {
+        this.admin_name = admin_name;
     }
 
-    public String getAdmin_Password() {
-        return admin_Password;
+    public String getAdmin_password() {
+        return admin_password;
     }
 
-    public void setAdmin_Password(String admin_Password) {
-        this.admin_Password = admin_Password;
+    public void setAdmin_password(String admin_password) {
+        this.admin_password = admin_password;
     }
 }
