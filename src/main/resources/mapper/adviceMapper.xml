@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group2.phrmanager.dao.AdviceDao">
+    <select id="findAll" resultType="AdviceEntity">
+        select * from h_advice
+    </select>
+    
+    <select id="selectAdviceCount" resultType="int">
+        select count(*) from h_advice
+    </select>
+
+    <select id="selectAdviceByPage" parameterType="com.group2.phrmanager.unti.Page" resultType="AdviceEntity">
+        select * from h_advice limit #{pageIndex},#{pageSize}
+    </select>
+
+    <select id="selectAdviceById" parameterType="String" resultType="AdviceEntity">
+        select * from h_advice where h_id=#{h_id}
+    </select>
+</mapper>

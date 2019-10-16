@@ -4,11 +4,20 @@ package com.group2.phrmanager.entity;
  * @author 王见林
  */
 public class MedicineEntity {
+    private int med_id;
     private String med_name;    // 药物名（主键）
     private int med_num;     //药物编号
     private String med_fun;     // 药物功能
     private String med_forbid;  // 药物禁忌
     private String med_compare; //药物对比信息
+
+    public int getMed_id() {
+        return med_id;
+    }
+
+    public void setMed_id(int med_id) {
+        this.med_id = med_id;
+    }
 
     public String getMed_name() {
         return med_name;

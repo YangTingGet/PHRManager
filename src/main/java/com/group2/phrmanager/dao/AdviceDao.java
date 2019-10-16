@@ -2,9 +2,12 @@ package com.group2.phrmanager.dao;
 
 
 import com.group2.phrmanager.entity.AdviceEntity;
+import com.group2.phrmanager.service.AdviceService;
+import com.group2.phrmanager.unti.Page;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface AdviceDao {
 
     boolean add(AdviceEntity advice);
@@ -29,4 +32,11 @@ public interface AdviceDao {
      * 修改资讯审核状态
      */
     boolean updateInformationState(String informationNum);
+
+    int selectAdviceCount();
+
+    List<AdviceEntity> selectAdviceByPage(Page page);
+
+    AdviceEntity selectAdviceById(String h_id);
+
 }
