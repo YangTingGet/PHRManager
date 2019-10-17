@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -9,16 +9,16 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>病历夹</title>
+    <title>首页</title>
 
     <!-- Favicon  -->
-    <link rel="icon" href="../img/core-img/favicon.ico">
+    <link rel="icon" href="../../img/core-img/favicon.ico">
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <!-- Floating box Style CSS -->
-    <link rel=stylesheet href="../css/common.css">
-    <link rel=stylesheet href="../css/jdc-side-panel.css">
+    <link rel=stylesheet href="../../css/common.css">
+    <link rel=stylesheet href="../../css/jdc-side-panel.css">
 
 </head>
 
@@ -51,30 +51,30 @@
                     <div class="main-menu h-100">
                         <nav class="navbar h-100 navbar-expand-lg">
                             <!-- Logo Area  -->
-                            <a class="navbar-brand" href="index_user.html"><img src="../img/core-img/logo.png" alt="Logo"></a>
+                            <a class="navbar-brand" href="../index.html"><img src="../../img/core-img/logo.png" alt="Logo"></a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
                             <div class="collapse navbar-collapse" id="medilifeMenu">
                                 <!-- Menu Area -->
                                 <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index_user.html">首页 <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="DrugInformation.html">药品信息</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../../templates/appintment.html">自主挂号</a>
-                                    </li>
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="MedicalRecordFolder.html">病历夹</a>
+                                        <a class="nav-link" href="../index.html">首页 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../DrugInformation.html">药品信息</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../user/appintment.html">自主挂号</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../user/MedicalRecordFolder.html">病历夹</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">个人中心</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="notification.html">消息提示<span class="badge badge-pill badge-danger">1</span></a>
-                                            <a class="dropdown-item" href="../../templates/settingUp_user.html">账号设置</a>
+                                            <a class="dropdown-item" href="notification.html">消息提示</a>
+                                            <a class="dropdown-item" href="settingUp.html">账号设置</a>
                                             <a class="dropdown-item" href="#">安全退出</a>
                                         </div>
                                     </li>
@@ -96,7 +96,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="breadcumb-content">
-                    <h3 class="breadcumb-title">病历夹</h3>
+                    <h3 class="breadcumb-title">健康资讯详情</h3>
                 </div>
             </div>
         </div>
@@ -105,103 +105,39 @@
 <!-- ***** Breadcumb Area End ***** -->
 
 <!-- ***** Blog Area Start ***** -->
-<!-- ***** 病历夹信息 ***** -->
+<!-- ***** 健康资讯详情 ***** -->
 <section class="medilife-blog-area section-padding-100">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-8">
                 <div class="row">
                     <!-- Single Blog Area -->
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-10">
                         <div class="single-blog-area bg-gray mb-50">
                             <!-- Post Content -->
                             <div class="post-content">
-                                <a href="#" class="headline">药品1</a>
-                                <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                <h3 href="#" class="headline mb-0"><span th:text="${advice.h_id}"></span> </h3>
+                                <p><span th:text="${advice.h_body}"></span></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Single Blog Area -->
-                    <div class="col-12 col-md-6">
-                        <div class="single-blog-area bg-gray mb-50">
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <a href="#" class="headline">药品1</a>
-                                <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Blog Area -->
-                    <div class="col-12 col-md-6">
-                        <div class="single-blog-area bg-gray mb-50">
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <a href="#" class="headline">药品1</a>
-                                <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Blog Area -->
-                    <div class="col-12 col-md-6">
-                        <div class="single-blog-area bg-gray mb-50">
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <a href="#" class="headline">药品1</a>
-                                <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Blog Area -->
-                    <div class="col-12 col-md-6">
-                        <div class="single-blog-area bg-gray mb-50">
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <a href="#" class="headline">药品1</a>
-                                <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Blog Area -->
-                    <div class="col-12 col-md-6">
-                        <div class="single-blog-area bg-gray mb-50">
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <a href="#" class="headline">药品1</a>
-                                <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
             <div class="col-12 col-lg-4">
                 <div class="medilife-blog-sidebar-area">
-
                     <!-- medilife Emergency Card -->
                     <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(../img/bg-img/about1.jpg);">
                         <i class="icon-smartphone"></i>
                         <h2>For Emergency calls</h2>
                         <h3>+120</h3>
                     </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12">
-                <!-- Pagination Area -->
-                <!-- 下标页码 -->
-                <div class="pagination-area mt-50">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                            <li class="page-item"><a class="page-link" href="#">02</a></li>
-                            <li class="page-item"><a class="page-link" href="#">03</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <!-- ***** Blog Area End ***** -->
@@ -270,15 +206,15 @@
 
 
 <!-- jQuery (Necessary for All JavaScript Plugins) -->
-<script src="../js/jquery/jquery-2.2.4.min.js"></script>
+<script src="../../js/jquery/jquery-2.2.4.min.js"></script>
 <!-- Popper js -->
-<script src="../js/popper.min.js"></script>
+<script src="../../js/popper.min.js"></script>
 <!-- Bootstrap js -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <!-- Plugins js -->
-<script src="../js/plugins.js"></script>
+<script src="../../js/plugins.js"></script>
 <!-- Active js -->
-<script src="../js/active.js"></script>
+<script src="../../js/active.js"></script>
 
 <script>
 

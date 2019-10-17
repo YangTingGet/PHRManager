@@ -3,13 +3,12 @@ package com.group2.phrmanager.dao;
 
 
 import com.group2.phrmanager.entity.MedicineEntity;
-import org.apache.ibatis.annotations.Mapper;
+import com.group2.phrmanager.unti.Page;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-@Mapper
 public interface DrugDao {
     boolean add(MedicineEntity drug);
 
@@ -20,4 +19,10 @@ public interface DrugDao {
     List<MedicineEntity> findSome();
 
     boolean update(MedicineEntity newInfo);
+
+    int selectMedicineCount();
+
+    List<MedicineEntity> selectMedicineByPage(Page page);
+
+    MedicineEntity selectMedicineByMedid(String med_id);
 }

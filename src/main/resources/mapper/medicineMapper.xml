@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group2.phrmanager.dao.DrugDao">
+    <select id="findSome" resultType="MedicineEntity">
+        select * from medicine
+    </select>
+    
+    <select id="selectMedicineCount" resultType="int">
+        select count(*) from medicine
+    </select>
+
+    <select id="selectMedicineByPage" parameterType="com.group2.phrmanager.unti.Page" resultType="MedicineEntity">
+        select * from medicine limit #{pageIndex},#{pageSize}
+    </select>
+
+    <select id="selectMedicineByMedid" parameterType="String" resultType="MedicineEntity">
+        select * from medicine where med_id=#{med_id}
+    </select>
+</mapper>
