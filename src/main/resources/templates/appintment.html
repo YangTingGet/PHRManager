@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleleaf.org">
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="fragments/adminModel">
 
 <head>
     <meta charset="UTF-8">
@@ -118,24 +122,24 @@
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
                                                 <select class="form-control" id="hospital" name="hospital">
-                                                    <option>医院 1</option>
-                                                    <option>医院 2</option>
-                                                    <option>医院 3</option>
-                                                    <option>医院 4</option>
-                                                    <option>医院 5</option>
+                                                    <option value="">--请选择医院--</option>
+                                                    <option th:text="${hospital.getHospital_name()}" th:each="hospital : ${allHospitals}">医院名字</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
                                                 <select class="form-control" id="speciality" name="speciality">
-                                                    <option>科室 1</option>
-                                                    <option>科室 2</option>
-                                                    <option>科室 3</option>
-                                                    <option>科室 4</option>
-                                                    {foreach name="category_list" item="category" }
-                                                    <option value="{$user_hospital.Doctor_category}">{$user_hospital.Doctor_category}</option>
-                                                    {/foreach}
+                                                    <option value="">--请选择科室--</option>
+                                                    <option th:text="${category}" th:each="category : ${categories}">科室名</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="form-group">
+                                                <select class="form-control" id="doctor" name="doctor">
+                                                    <option value="">--请选择医生--</option>
+                                                    <option th:text="${doctor.getDoctor_name()}" th:each="doctor : ${allDoctors}">医生名字</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -151,28 +155,17 @@
                                         </div>
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
-                                                <select class="form-control" id="doctor" name="doctor">
-                                                    <option>医生 1</option>
-                                                    <option>医生 2</option>
-                                                    <option>医生 3</option>
-                                                    <option>医生 4</option>
-                                                    <option>医生 5</option>
-                                                </select>
+                                                <input th:value="${userEntity.getReally_name()}" type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name" disabled>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name" placeholder="Name" disabled>
+                                                <input th:value="${userEntity.getTelphone()}" type="text" class="form-control border-top-0 border-right-0 border-left-0" name="number" id="number" disabled>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="number" id="number" placeholder="Phone" disabled>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" id="email" placeholder="E-mail" disabled>
+                                                <input th:value="${userEntity.getEmail()}" type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" id="email" disabled>
                                             </div>
                                         </div>
 

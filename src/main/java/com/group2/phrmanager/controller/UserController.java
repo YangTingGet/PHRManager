@@ -19,7 +19,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Controller
@@ -118,9 +121,17 @@ public class UserController {
         UserEntity userEntity = userService.getInfo(
                 (String) request.getSession().getAttribute("userName"));
         List<DoctorEntity> allDoctors = doctorService.getAllDoctors();
+        List<String> allCategories = new ArrayList<>();
+        Iterator<DoctorEntity> iterator = allDoctors.iterator();
+        for (Iterator<DoctorEntity> it = iterator; it.hasNext(); ) {
+            DoctorEntity doctor = it.next();
+            allCategories.add(doctor.getDoctor_category());
+        }
+        List<String> categories = allCategories.stream().distinct().collect(Collectors.toList());
         List<HospitalEntity> allHospitals = hospitalService.getAllHospitals();
         modelAndView.addObject("userEntity", userEntity);
         modelAndView.addObject("allDoctors", allDoctors);
+        modelAndView.addObject("categories", categories);
         modelAndView.addObject("allHospitals", allHospitals);
         modelAndView.setViewName("appintment");
         return modelAndView;

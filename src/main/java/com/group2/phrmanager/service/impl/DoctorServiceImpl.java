@@ -18,6 +18,6 @@ public class DoctorServiceImpl implements DoctorService {
     private DoctorDao doctorDao;
     @Override
     public List<DoctorEntity> getAllDoctors() {
-        return null;
+        return doctorDao.findAll();
     }
 }
